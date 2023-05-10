@@ -14,7 +14,7 @@ include "config.php";
 $query = mysqli_query($conn, "SELECT * FROM barang");
 ?>
 <div class="container-fluid">
-        <button class="btn btn-success">Tambah Data</button>
+        <a href="tambah.php" class="btn btn-success">Tambah Data</a>
                 <form action="" method="post">
                         <table class="table table-dark table-striped">
                                 <tr>
@@ -23,6 +23,7 @@ $query = mysqli_query($conn, "SELECT * FROM barang");
                                         <th>Jenis</th>
                                         <th>Harga</th>
                                         <th>Stok</th>
+                                        <th>Id Distributor</th>
                                         <th>Aksi</th>
                                 </tr>
                                 <?php if (mysqli_num_rows($query)>0) {?>
@@ -36,6 +37,7 @@ $query = mysqli_query($conn, "SELECT * FROM barang");
                                         <td><?php echo $data['jenis']?></td>
                                         <td><?php echo $data['harga']?></td>
                                         <td><?php echo $data['stok']?></td>
+                                        <td><?php echo $data['distributor_id']?></td>
                                         <td>
                                                 <button class="btn btn-primary">Update</button>
                                                 <button class="btn btn-danger">Delete</button>
