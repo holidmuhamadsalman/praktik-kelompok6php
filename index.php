@@ -33,14 +33,15 @@ $query = mysqli_query($conn, "SELECT * FROM barang");
                                 ?>
                                 <tr>
                                         <td><?php echo $no?></td>
+                                        <!-- <?php echo $data['id_barang']?> -->
                                         <td><?php echo $data['nama']?></td>
                                         <td><?php echo $data['jenis']?></td>
                                         <td><?php echo $data['harga']?></td>
                                         <td><?php echo $data['stok']?></td>
                                         <td><?php echo $data['distributor_id']?></td>
                                         <td>
-                                                <button class="btn btn-primary">Update</button>
-                                                <button class="btn btn-danger">Delete</button>
+                                                <a href="edit.php?id_barang=<?php echo $data['id_barang']?>" class="btn btn-primary">Edit</a>
+                                                <a href="proses_hapus.php?id_barang=<?php echo $data['id_barang']?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger">Hapus</a>
                                         </td>
                                 </tr>
                                 <?php $no++; } ?>
