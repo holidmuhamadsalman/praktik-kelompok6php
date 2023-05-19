@@ -46,7 +46,7 @@
             <input type="text" name="distributor_id" class="form-control" id="distributor_id">
             <p id="distributorid_error"></p>
           </div>
-          <button type="submit" class="btn btn-primary" id="button_id">Simpan</button>
+          <button type="button" class="btn btn-primary" id="button_id">Simpan</button>
         </form>
         </div>
 
@@ -59,6 +59,7 @@
                         $('#harga_error').text('Silahkan isi harga terlebih dahulu').css({"color" : "red", "font-size" : "10pt"});
                         $('#stok_error').text('Silahkan isi stok terlebih dahulu').css({"color" : "red", "font-size" : "10pt"});
                         $('#distributorid_error').text('Silahkan isi id distributor terlebih dahulu').css({"color" : "red", "font-size" : "10pt"});
+                        
 		} else {
 			$('#form_id').submit();
 		}
